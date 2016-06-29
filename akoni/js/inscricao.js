@@ -331,8 +331,9 @@ function gravaProfMova() {
 //funções referentes ao botão PROXIMO da Etapa 2- Identificação do(a) Educando(a)--------------------------------
 
 function AbrirEtapa3Educando() {
-    if ($('#txtNomeEducando').val() != '' && $('#txtDtNasc').val() != '' && $('#cboSexoEducando').val() != 'selecione' && $('#cboCorEducando').val() != 'selecione' && $('#cboCursando').val() != 'selecione') {
-
+var nasc = $('#txtDtNasc').val();
+var tamanho = nasc.length;
+    if ($('#txtNomeEducando').val() != '' && tamanho == 10 && $('#cboSexoEducando').val() != 'selecione' && $('#cboCorEducando').val() != 'selecione' && $('#cboCursando').val() != 'selecione') {
 
         if ($('#hdnIdTrabEducando').val() != '') {
             upDataTrabEducando();
@@ -592,12 +593,13 @@ function contarCaract(nomeCampo, tamanho) {
 
 
 function finalizar() {
-
+var realizacao = $('#txtDtRealizacao').val();
+var tamanho = realizacao.length;
     if (!verificarQtdInscricao()) {
         return false;
     }
 
-    if ($('#txtDtRealizacao').val() != '' && $('#txtImpressao').val() != '' && $('#txtSaberes').val() != '' && $('#txtRecursos').val() != '' && $('#txtAcoes').val() != '' && $('#txtObjetivo').val() != '')
+    if (tamanho == 10 && $('#txtImpressao').val() != '' && $('#txtSaberes').val() != '' && $('#txtRecursos').val() != '' && $('#txtAcoes').val() != '' && $('#txtObjetivo').val() != '')
     {
 
         if ($('#hdnIdDescTrabalho').val() == '') {

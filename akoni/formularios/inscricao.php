@@ -369,7 +369,7 @@
                                                             <tr>
                                                                 <td colspan="3">
                                                                     Como o(a) educando(a) se autodeclara: considerando as categorias do Instituto Brasileiro de Geografia e Estatística (IBGE), quanto à cor/raça/etnia, como segue:  *<br />
-																	<p><font color="#6E6E6E">Questionar o(a) educando(a) como ele(ela) se autodeclara em relação à sua cor/raça/etnia. No caso de educando(a), até 14 anos e 11 meses de idade, verificar a ficha de matrícula. </font> </p>		
+																			
                                                                     
                                                                     <select name="cboCorEducando" id="cboCorEducando" class="validate[required]">
                                                                         <option value="selecione">Selecione</option>
@@ -379,6 +379,7 @@
                                                                         <option value="4">AMARELO(A)</option>
                                                                         <option value="5">INDIGENA</option>
                                                                     </select>
+                                                                    <p><font color="#6E6E6E">Questionar o(a) educando(a) como ele(ela) se autodeclara em relação à sua cor/raça/etnia. No caso de educando(a), até 14 anos e 11 meses de idade, verificar a ficha de matrícula. </font> </p>
                                                                 </td>
                                                             </tr>
                                                             <tr>
