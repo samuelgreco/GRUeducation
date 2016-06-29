@@ -1,5 +1,5 @@
 $().ready(function () {
-    $('#txtCPFResponsavel').mask('000.000.000-00');
+    //$('#txtCPFResponsavel').mask('000.000.000-00');
     $('#txtDtNasc').mask('00/00/0000');
     $('input[name="txtDtNascEducador[]"]').mask('00/00/0000');
     $('#txtDtRealizacao').mask('00/00/0000');
@@ -14,17 +14,57 @@ var cont = 2;
 var contProf = 2;
 
 function verificaCPF() {
-    var txtCPFResponsavel = $("#txtCPFResponsavel").val();
-    if (txtCPFResponsavel != '') {
+    var strCPF = $("#txtCPFResponsavel").val();
+    var Soma; 
+    var Resto; 
+    var cboll = true; 
+    Soma = 0;
+    
+    
+    if (strCPF.length != 11 || 
+    		strCPF == "00000000000" || 
+    		strCPF == "11111111111" || 
+    		strCPF == "22222222222" || 
+    		strCPF == "33333333333" || 
+    		strCPF == "44444444444" || 
+    		strCPF == "55555555555" || 
+    		strCPF == "66666666666" || 
+    		strCPF == "77777777777" || 
+    		strCPF == "88888888888" || 
+    		strCPF == "99999999999") 
+    	{
+    		cboll = false; }
+    
+    
+    for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i); 
+    Resto = (Soma * 10) % 11; 
+
+    if ((Resto == 10) || (Resto == 11)) Resto = 0; 
+    if (Resto != parseInt(strCPF.substring(9, 10)) ) cboll = false; 
+
+    Soma = 0; 
+    for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i); 
+    Resto = (Soma * 10) % 11; 
+
+    if ((Resto == 10) || (Resto == 11)) Resto = 0; 
+    if (Resto != parseInt(strCPF.substring(10, 11) ) ) cboll = false; 
+
+    
+
+    if (cboll) {
         consultaInscricao();
+        return cboll;
     }
     else {
-        alert('Por favor digite um CPF para prosseguir.')
+        alert('Por favor digite um CPF válido para prosseguir.')
+        $('#txtCPFResponsavel').css('background-color','#FF7171'); 
+        $('#txtCPFResponsavel').focus(); 
+        
     }
 }
 
 function Enter(event) {
-    if (event.keyCode == 13)
+    if (event.keyCode == 10)
     {
         verificaCPF();
         return false;

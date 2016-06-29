@@ -127,7 +127,7 @@
                         </tr>
                         <tr>	
                             <td colspan="4" align="center">
-                                <input id="txtCPFResponsavel" name="txtCPFResponsavel" onkeypress="return Enter(event)">
+                                <input id="txtCPFResponsavel" name="txtCPFResponsavel" maxlength="11" onkeypress="return Enter(event)">
                             </td>
                         </tr>
 
