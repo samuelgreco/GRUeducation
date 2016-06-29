@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Processo Seletivo Simplificado 2015</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="../lib/css/estilo.css" />
+
+<script src="../lib/js/jquery-1.9.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../lib/js/ajax.js"></script>
+<script type="text/javascript" src="../../lib/js/select.js"></script>
+<script type="text/javascript" src="../../lib/js/objeto.js"></script>
+<script type="text/javascript" src="../../lib/js/funcoes.js"></script>
+<script type="text/javascript" src="js/informacoes.js"></script>
+<script>
+function verificar(){
+	var id = chamar_ajax('php/define.php', 'filtro=GetLogin', false, 'text', null);
+	
+	if (id<=0){
+		parent.location.href = "index.php";
+	}
+}
+</script>
+</head>
+
+<body onload="verificar();CarregaUltimasNoticias()">
+<div id="tela">
+	<div id="tela_camp">
+		<div id="cabeçario">
+			<h1 style="padding:0px;font-size:22px;">Bem-vindo ao sistema de inscrição ao Processo Seletivo Simplificado 2015</h1>
+		</div>
+	
+		<div id="tela_ajuda">
+			<h2 style="padding:0px;font-size:18px;">Últimas informações</h2>
+		   
+			<div id="lstNoticias"></div>
+		
+			<br /><br />
+			<p style="text-align: center;font-family: Arial;color: #000;">
+			   Para mais informações, ligue para a Secretaria de Educação de Guarulhos<br /> 
+			   Telefone: 2475-7300 - Ramal: 7309<br /> ou mande e-mail para: comissaoprocessoseletivo2015@googlegroups.com
+			</p>
+		</div>
+	</div>
+	
+	<div id="rodape">
+		<div id="rodape_texto">Secretaria Municipal de Educação de Guarulhos<br />DPIE - Departamento de Planejamento e Informática na Educação</div>
+	</div>
+</div>
+</body>
+</html>

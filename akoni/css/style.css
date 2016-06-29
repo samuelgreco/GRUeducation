@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-size: 12px;
+}
+
+table tr td{
+	font-size: 12px;
+}
+
+table tbody tr td{
+	font-size: 12px;
+}
+
+.Inicio {
+	background: #3498db url(../images/home.png) no-repeat 7px; 
+	border: 0px solid;
+	color: #fff;
+	font: 14px verdana, arial, helvetica, sans-serif;
+	margin: 5px;
+	padding: 10px;
+	padding-left: 40px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.Status {
+	background: #1abc9c url(../images/note.png) no-repeat 7px; 
+	border: 0px solid;
+	color: #fff;
+	font: 14px verdana, arial, helvetica, sans-serif;
+	margin: 5px;
+	padding: 10px;
+	padding-left: 40px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.Mais {
+	background: #1abc9c url(../images/add.png) no-repeat 7px; 
+	border: 0px solid;
+	color: #fff;
+	font: 14px verdana, arial, helvetica, sans-serif;
+	margin: 5px;
+	padding: 10px;
+	padding-left: 40px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.Acesso {
+	height:40px;
+	width: 130px;
+	background: #6db52c url(../../lib/images/icones/cadeadofechado.png) no-repeat 5px; 
+	border:#1abc9c 0px solid;
+	color: #FFFFFF;
+	font: 14px verdana, arial, helvetica, sans-serif;
+	margin-right: 15px;
+	padding-bottom:2px;
+	cursor: pointer;
+}
+	
+.Acesso:active{ 
+	background: #6db52c url(../../lib/images/icones/cadeadofechado.png) no-repeat 6px; 
+	color: #DDDDDD;
+	font-weight:bold;
+}
+
+.Proximo {
+	height:40px;
+	width: 130px;
+	background: #fff url(../images/next.png) no-repeat 5px;
+	background-position: right;
+	border:#1d1d1d 1px solid;
+	color: #1d1d1d;
+	font: 14px verdana, arial, helvetica, sans-serif;
+	margin-right: 15px;
+	padding-bottom:2px;
+	cursor: pointer;
+}
+	
+.Proximo:active{ 
+	background: #fff url(../images/next.png) no-repeat 6px;
+	background-position: right;
+	color: #000;
+	font-weight:bold;
+}

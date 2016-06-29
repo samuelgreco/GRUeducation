@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Processo Seletivo Simplificado 2015</title>
+<link href="../css/estilo.css" rel="stylesheet" type="text/css" />
+<link href="../css/estiloTabela.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../../lib/css/estilo.css" />
+<link rel="stylesheet" type="text/css" href="../../lib/css/jquery.validationEngine.css" />
+
+<script src="../../lib/js/jquery-1.9.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../lib/js/jquery.validationEngine-ptBr.js"></script>
+<script type="text/javascript" src="../../lib/js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="../../lib/js/ajax.js"></script>
+<script type="text/javascript" src="../../lib/js/select.js"></script>
+<script type="text/javascript" src="../../lib/js/objeto.js"></script>
+<script type="text/javascript" src="../../lib/js/funcoes.js"></script>
+<script type="text/javascript" src="../js/jquery.mask.js"></script>
+<script type="text/javascript" src="../js/pontuacao.js"></script>
+<script type="text/javascript" src="../js/verifica_sessao.js"></script>
+</head>
+<body onload="verificar()">
+<form id="frmPontuacao" name="frmPontuacao">
+	<h1 style="padding:0px;">Atribuir pontuação</h1>
+	<input type='hidden' id='txtID' name='txtID' value='' />
+	<input type='hidden' id='txtIDPontuacao' name='txtIDPontuacao' value='' />
+	<table>
+		<tr>
+			<td>
+				Tipo de pesquisa:<br />
+				<select name="cboTipo" id="cboTipo" onchange="mudaTipo(this.value)">
+					<option value="IDCANDIDATO">N° de inscrição</option>
+					<option value="CPF">CPF</option>
+				</select>
+			</td>
+			<td style="vertical-align: bottom;">
+				<input type="text" id="txtValor" name="txtValor" onkeypress="return Enter(event)" />
+			</td>
+			<td>
+				<a href="#" onclick="PesqCandidato()" class="Pesquisar" title="Pesquisar">&nbsp;</a>
+			</td>
+		</tr>
+	</table>
+	<br />
+	<div id="dados" style="display:none;"></div>
+	<br />
+	<div id="pontos" style="display:none;">
+		<table class="CSSTabela">
+			<thead>
+				<tr>
+					<th rowspan="2">
+						Cursos e experiências<br />
+						(os diplomas devem ser reconhecidos pelo MEC)
+					</th>
+					<th colspan="2">
+						Regras
+					</th>
+					<th colspan="2">
+						Pontuação
+					</th>
+				</tr>
+				<tr>
+					<th>
+						Pontuação<br />por item
+					</th>
+					<th>
+						Pontuação<br />máxima
+					</th>
+					<th>
+						Quantidade
+					</th>
+					<th>
+						Pontos
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						Diploma e/ou certificado/certidão de conclusão de curso acompanhados de histórico escolar em:<br />
+						<b>Doutorado</b> em Educação ou áreas afins da Educação Especial
+					</td>
+					<td>35</td>
+					<td>35</td>
+					<td>
+						<div style="vertical-align:middle;">
+							<img src="../images/menos.png" style="width:18px;cursor:pointer;" onclick="menos('Doutor')" />
+							<input type="text" id="lblQtdeDoutor" style="border:1px solid #000;padding:5px;width:20px;text-align:center;" value="0" readonly="readonly"/>
+							<img src="../images/mais.png" style="width:18px;cursor:pointer;" onclick="mais('Doutor')" />
+						</div>
+					</td>
+					<td>
+						<input type="text" id="txtDoutor" style="border:0px solid #fff;width:20px;text-align:center;" value="0" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Diploma e/ou certificado/certidão de conclusão de curso acompanhados de histórico escolar em:<br />
+						<b>Mestrado</b> em Educação ou áreas afins da Educação Especial
+					</td>
+					<td>25</td>
+					<td>25</td>
+					<td>
+						<div style="vertical-align:middle;">
+							<img src="../images/menos.png" style="width:18px;cursor:pointer;" onclick="menos('Mestre')" />
+							<input type="text" id="lblQtdeMestre" style="border:1px solid #000;padding:5px;width:20px;text-align:center;" value="0" readonly="readonly"/>
+							<img src="../images/mais.png" style="width:18px;cursor:pointer;" onclick="mais('Mestre')" />
+						</div>
+					</td>
+					<td>
+						<input type="text" id="txtMestre" style="border:0px solid #fff;width:20px;text-align:center;" value="0" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Certificado de <b>especialização</b> na área de Educação ou em áreas afins da Educação Especial<br />
+						carga horária minima de 360 horas
+					</td>
+					<td>5</td>
+					<td>10</td>
+					<td>
+						<div style="vertical-align:middle;">
+							<img src="../images/menos.png" style="width:18px;cursor:pointer;" onclick="menos('Pos')" />
+							<input type="text" id="lblQtdePos" style="border:1px solid #000;padding:5px;width:20px;text-align:center;" value="0" readonly="readonly"/>
+							<img src="../images/mais.png" style="width:18px;cursor:pointer;" onclick="mais('Pos')" />
+						</div>
+					</td>
+					<td>
+						<input type="text" id="txtPos" style="border:0px solid #fff;width:20px;text-align:center;" value="0" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Diploma de segunda graduação (licenciatura) ou áreas afins da Educação Especial
+					</td>
+					<td>10</td>
+					<td>10</td>
+					<td>
+						<div style="vertical-align:middle;">
+							<img src="../images/menos.png" style="width:18px;cursor:pointer;" onclick="menos('Superior')" />
+							<input type="text" id="lblQtdeSuperior" style="border:1px solid #000;padding:5px;width:20px;text-align:center;" value="0" readonly="readonly"/>
+							<img src="../images/mais.png" style="width:18px;cursor:pointer;" onclick="mais('Superior')" />
+						</div>
+					</td>
+					<td>
+						<input type="text" id="txtSuperior" style="border:0px solid #fff;width:20px;text-align:center;" value="0" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Diploma e/ou certificado/certidão de conclusão de curso acompanhados de histórico escolar<br />
+						da licenciatura completa em Pedagogia ou curso completo Normal Superior
+					</td>
+					<td>5</td>
+					<td>5</td>
+					<td>
+						<div style="vertical-align:middle;">
+							<img src="../images/menos.png" style="width:18px;cursor:pointer;" onclick="menos('Pedagogia')" />
+							<input type="text" id="lblQtdePedagogia" style="border:1px solid #000;padding:5px;width:20px;text-align:center;" value="0" readonly="readonly"/>
+							<img src="../images/mais.png" style="width:18px;cursor:pointer;" onclick="mais('Pedagogia')" />
+						</div>
+					</td>
+					<td>
+						<input type="text" id="txtPedagogia" style="border:0px solid #fff;width:20px;text-align:center;" value="0" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Diploma e/ou certificado/certidão de conclusão de curso acompanhados de histórico escolar<br />
+						da habilitação específica para o magistério (ensino médio)
+					</td>
+					<td>5</td>
+					<td>5</td>
+					<td>
+						<div style="vertical-align:middle;">
+							<img src="../images/menos.png" style="width:18px;cursor:pointer;" onclick="menos('Magisterio')" />
+							<input type="text" id="lblQtdeMagisterio" style="border:1px solid #000;padding:5px;width:20px;text-align:center;" value="0" readonly="readonly"/>
+							<img src="../images/mais.png" style="width:18px;cursor:pointer;" onclick="mais('Magisterio')" />
+						</div>
+					</td>
+					<td>
+						<input type="text" id="txtMagisterio" style="border:0px solid #fff;width:20px;text-align:center;" value="0" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Comprovação de tempo de atuação como docente
+					</td>
+					<td>5<br />(por semestre<br />concluído)</td>
+					<td>10</td>
+					<td>
+						<div style="vertical-align:middle;">
+							<img src="../images/menos.png" style="width:18px;cursor:pointer;" onclick="menos('Docente')" />
+							<input type="text" id="lblQtdeDocente" style="border:1px solid #000;padding:5px;width:20px;text-align:center;" value="0" readonly="readonly"/>
+							<img src="../images/mais.png" style="width:18px;cursor:pointer;" onclick="mais('Docente')" />
+						</div>
+						(semestres<br />concluídos)
+					</td>
+					<td>
+						<input type="text" id="txtDocente" style="border:0px solid #fff;width:20px;text-align:center;" value="0" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="border:0px solid #fff;"></td>
+					<td>TOTAL:</td>
+					<td><input type="text" id="txtTotal" style="border:0px solid #fff;width:30px;text-align:center;font-weight:bold;" value="0" readonly="readonly"/></td>
+				</tr>
+				<tr>
+					<td colspan="5" style="border:0px solid #fff;">
+						<input type="button" name="cmdSalvar" id="cmdSalvar" value="Salvar" class="Salvar" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</form>
+</body>
+</html>

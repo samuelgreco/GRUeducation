@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Processo Seletivo Simplificado 2015</title>
+<link href="../../lib/css/estilo.css" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="../../lib/css/jquery.validationEngine.css" />
+
+<script type="text/javascript" src="../../lib/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../lib/js/jquery.validationEngine-ptBr.js"></script>
+<script type="text/javascript" src="../../lib/js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="../../lib/js/ajax.js"></script>
+<script type="text/javascript" src="../../lib/js/select.js"></script>
+<script type="text/javascript" src="../../lib/js/objeto.js"></script>
+<script type="text/javascript" src="../js/nicEdit.js"></script>
+<script type="text/javascript" src="../js/noticias.js"></script>
+<script type="text/javascript" src="../js/verifica_sessao.js"></script>
+</head>
+
+<body onload="verificar();iniciar()">
+
+<form id="frmCadNoticias" name="frmCadNoticias" method="post" action="../php/cadNoticias.php">
+<input type="hidden" name="txtID" id="txtID" />
+
+<h1><a class='Voltar' href='lstNoticias.php' title='Voltar'></a>Cadastro de informações</h1>
+Título:<br />
+<input name="txtTitulo" type="text" maxlength="60" style="width:445px; height:20px" id="txtTitulo" class="validate[required, maxSize[60]]" /> <br />
+<br />
+
+Corpo do texto: <br />
+<textarea id="txtTexto" name="txtTexto" cols="1" rows="10" style="width:600px; height:200px;" class="validate[required]"></textarea><br />
+
+<br />
+<input id="cmdSalvarNoticias" name="cmdSalvarNoticias" class="Salvar" type="button" value="Salvar" />
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.CSSTabela {
+	margin: 0px;
+	padding: 0px;
+}
+
+.CSSTabela table {
+	border-spacing: 0;
+	margin: 0px;
+	padding: 0px;
+}
+
+.CSSTabela td {
+	vertical-align: middle;
+	border: 1px solid #000000;
+	border-width: 1px 1px 1px 1px;
+	text-align: center;
+	padding: 5px;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: normal;
+	color: #000000;
+}
+
+.CSSTabela thead th {
+	background-color: #0057af;
+	border: 0px solid #000000;
+	text-align: center;
+	padding: 5px;
+	border-width: 1px 1px 1px 1px;
+	font-size: 14px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.CSSTabela thead td {
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	text-align: center;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.CSSTabela tbody th {
+	background-color: #039cc7;
+	border: 0px solid #002641;
+	text-align: center;
+	border-width: 1px 1px 1px 1px;
+	font-size: 14px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #fff;
+	padding: 5px;
+}
+
+/* .par{
+	background-color: #E4F1FE;
+}
+
+.impar{
+	background-color:#fff;
+} */

@@ -1,0 +1,6 @@
+﻿SISTEMA: Concurso - Processo Seletivo Simplificado
+
+v.1.0 (2015)
+
+v.1.1 Melhorias e correções (09/2015)
+- Inserção de registro de histórico de operações dos usuários;

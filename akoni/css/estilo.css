@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* CSS Document */
+#tela {
+	background:#FFFFFF ;
+	width:900px;
+	height:auto;
+	margin: 0 auto;
+	position:relative;
+	border: #E1E1E1 1px solid;
+	border-right: #E1E1E1 1px solid
+}
+
+.hint{
+	font-size: 9px;
+	color: #BDC3C7;
+}
+
+/*#tela {
+	font-size:0.9em;
+	font-family: Helvetica;
+	color:#000000;
+}*/
+
+#tela_ajuda { text-align:left; font:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#000000}
+
+#tela_ajuda img { background:#F3F3F3;  border: 1px #CCCCCC solid; padding:5px}
+
+#tela_esquerda {
+	width:229px;
+	height:156px;
+	/*background: url(../imagem/funddo_esquerda.png) no-repeat;*/
+	position:absolute;
+	top:115px;
+	left:0px;
+}
+
+#banner {
+	font-size:10px;
+	color:#000000;
+	background: url(../images/banner-reduzido.png);
+	width:auto;
+	height:90px;
+	padding:0px
+}
+
+#banner a:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+#banner a:visited {
+	text-decoration: none;
+}
+
+#banner a:hover {
+	text-decoration: none;
+	color: #7371af;
+}
+
+#banner a:active {
+	text-decoration: none;
+}
+
+#banner_texto h1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+#banner_texto {
+	width:150px;
+	position:absolute;
+	top:80px;
+	left:750px;
+	padding:0px;
+}
+
+#banner_camp {
+	width:auto;
+	padding:10px;
+	text-align: right
+}
+
+#tela_camp {
+	width:780px;
+	height:auto;
+	margin:0 auto;
+	padding:15px;
+}
+
+/*#tela h1 {
+	color: #383737;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:25px;
+	font-weight:bold;
+	text-shadow:2px 2px 2px #C4C4C4;
+}*/
+
+/* #tela h4 {
+	color: #FF0000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	text-shadow:2px 2px 2px #C4C4C4;
+	text-align: center;
+} */
+
+#tela h4 {
+	border-bottom: solid 1px #039cc7;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#002641;
+}
+
+.publicado{
+	font-size:10px;
+	color: #666;
+	padding:17px 0px 0px 0px;
+	float:right;
+}
+
+#cabeçario {
+	margin-bottom:50px;
+	border-bottom:#CCCCCC 0px solid;
+	padding:0px
+}
+
+#linha_topo {
+	border-top:#CCCCCC 1px solid;
+	margin-top:15px;
+	margin-bottom:15px;
+	padding-top:20px;
+}
+
+#tempo {
+	width:780px;
+	height:50px;
+	margin: 0 auto;
+	margin-bottom:25px;
+	text-align:center;
+}
+
+#tempo h1 {
+	color: #990000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	text-shadow:2px 2px 2px #C4C4C4;
+	text-align:center;
+}
+
+#rodape {
+	background:#DF7401;
+	width:auto;
+	height:50px;
+	padding:0px;
+}
+
+#rodape_texto {
+	width:auto;
+	padding:25px;
+	font-size:9px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	text-align:center
+}
+
+/*---------------- menu----------------------*/
+ 
+ 
+.barra_menu {
+	font-size:14;
+	/*background: #DCF174 url(../imagem/menu.jpg);*/
+	width:auto;
+	padding:0px;
+	/* margin-bottom:25px; */
+}
+
+.menu {
+	padding:10px 10px 0 10px;
+	/* float:right; */
+}
+
+/* remove all the bullets, borders and padding from the default list styling */
+.menu ul {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	height:34px;
+}
+
+/* style the sub-level lists */
+.menu ul ul {
+	width: auto;
+}
+
+/* float the top list items to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+.menu ul li {
+	float:left;
+	height:34px;
+	line-height:34px;
+}
+
+/* style the sub level list items */
+.menu ul ul li {
+	display:block;
+	width: auto;
+	height:auto;
+	position:relative;
+	line-height:1em;
+}
+
+/* style the links for the top level */
+.menu a, .menu a:visited {
+	display:block;
+	float:left;
+	height:100%;
+	text-decoration:none;
+	color: #333333;
+	padding:0 21px 0 17px;
+}
+
+/* style the sub level links */
+.menu ul ul a, .menu ul ul a:visited {
+	display:block;
+	background:#96B2EA;
+	border-bottom:1px #FFFFFF solid;
+	color:#fff;
+	width:12em;
+	height:100%;
+	line-height:1em;
+	padding:1em 1em;
+}
+
+.menu ul table ul a, .menu ul table ul a:visited {
+	width:14em;
+	w\idth:12em;
+}
+
+/* style the table so that it takes no part in the layout - required for IE to work */
+.menu table {
+	position:absolute;
+	left:0;
+	top:0;
+	font-size:1em;
+	z-index:-1;
+}
+
+.menu ul ul table {
+	lef\t:-1px;
+}
+
+.menu ul ul table ul.left {
+	margin-lef\t:2px;
+}
+
+.menu li:hover {
+	position:relative;
+}
+
+* html .menu a:hover {
+	position:relative;
+}
+
+/* style the third level background */
+.menu ul ul ul a, .menu ul ul ul a:visited {
+	background:#57c0e8;
+}
+
+/* style the fourth level background */
+.menu ul ul ul ul a, .menu ul ul ul ul a:visited {
+	background:#57c0e8;
+}
+
+/* style the sub level 1 background */
+.menu ul :hover a.sub1 {
+	background: #006666;
+}
+
+/* style the sub level 2 background */
+.menu ul ul :hover a.sub2 {
+	background: #088bb4;
+}
+
+/* cor do  menu hover/
+/* first */
+.menu a:hover {
+	color:#002641;
+	background: #ccc;
+}
