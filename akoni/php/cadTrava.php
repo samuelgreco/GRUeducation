@@ -12,11 +12,17 @@ function Alterar(){
 
 	$db[sql]="UPDATE AKONI_TRAVA SET " . $_POST["campo"];
 
+
 	if ($con->alterar($db)){
 		echo "1";
 	}else {
 		echo "0";
 	}
+	
+	
+	
+	
+	
 }
 
 ?> 
