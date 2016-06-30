@@ -13,20 +13,7 @@ $().ready(function () {
 var cont = 2;
 var contProf = 2;
 
-
-//////////////APÓS VERIFICACAO, VOLTAR A FUNCAO COMENTADA ABAIXO
 function verificaCPF() {
-    var txtCPFResponsavel = $("#txtCPFResponsavel").val();
-    if (txtCPFResponsavel != '') {
-        consultaInscricao();
-    }
-    else {
-        alert('Por favor digite um CPF para prosseguir.')
-    }
-}
-
-
-/*function verificaCPF() {
     var strCPF = $("#txtCPFResponsavel").val();
     var Soma; 
     var Resto; 
@@ -74,12 +61,10 @@ function verificaCPF() {
         $('#txtCPFResponsavel').focus(); 
         
     }
-}*/
-
-
+}
 
 function Enter(event) {
-    if (event.keyCode == 13)
+    if (event.keyCode == 10)
     {
         verificaCPF();
         return false;
