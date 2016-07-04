@@ -1,0 +1,43 @@
+SISTEMA: Salão do Livro
+
+v.1.0 (2012)
+
+v.1.1 (Melhorias 2014)
+- Migração de servidor;
+- Correção de bugs;
+- Padronização de layout;
+- Inserção de cabeçalhos no acesso do tipo Escola;
+- Substituição das legendas "Espetáculo" para "Horários";
+- Remoção de campos para cadastro e informações de saída e retorno dos ônibus do formulário de cadastro de Horários e no Comprovante de Inscrição;
+- Inserção de campo para definição de tipo de vaga;
+- Inserção da opção de cadastro de escolas;
+- Inserção de formulário para alteração de senha após primeiro acesso (conforme regras de negócio);
+- Inserção de campos de identificação de escola do tipo Estadual/Particular (conforme regras de negócio);
+- Alteração da exibição de ícones e inserção de informações adicionais referentes às inscrições dos ônibus das escolas do tipo Municipal.
+- Alteração de regra de inscrição;
+- Exclusão de formulário de cadastro de participantes por espetáculo;
+- Limitação de inscrição por ônibus/vagas disponíveis (conforme regras de negócio);
+- Inserção de texto descritivo no comprovante de inscrição;
+- Inserção de formulário de controle de inscrições por escola para o administrador.
+
+v.1.2 (Melhorias 03/2016)
+- Correção de bugs;
+- Inserção de campos para cadastro de ônibus (Fundamental/Infantil) para discriminar quantidades por o ano escolar naquele ônibus;
+- Inserção de tutoriais para inscrição.
+
+v.1.3 (Correção 03/2016)
+- Correção de conexão com o banco de dados.
+
+
+v.1.4 (Melhorias 04/2016)
+- Adição de novos relatórios e correção de erros
+
+v.1.5 (Melhorias 04/2016)
+- Adição de relatório vagas em escolas municipais.
+
+v.1.6 (Melhorias 04/2016)
+- Adição de relatório vagas por ônibus em escolas municipais e correção de erros em outros relatórios
+
+v.1.7 (Correção 04/2016)
+- Correção do Relatório diário de vagas em escolas municipais que não estava trazendo horário do EJA
+

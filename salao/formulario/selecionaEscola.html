@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FormulÃ¡rio DPIE</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="language" content="en" />
+<script type="text/javascript" language="javascript" src="../../lib/js/ajax.js"></script>
+<script type="text/javascript" language="javascript" src="../../lib/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="../../lib/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../../lib/js/objeto.js"></script>
+<script type="text/javascript" src="../../lib/js/select.js"></script>
+<script type="text/javascript" language="javascript" src="../js/inscricao.js"></script>
+<link href="../../lib/css/jquery-ui-1.8.11.custom.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/css/demo_table_jui.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/css/estilo.css" rel="stylesheet" type="text/css" />
+<link href="../css/estilo_tela.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body onload="carregaEscolaCombo()">
+<div id="tela">
+
+<div id="tela">
+<div id="tela_centro">
+<div id="right">
+<div class="post">
+<div class="post_content">
+<form id="frmPesquisaEscola" name="frmPesquisaEscola" method="post">
+<h1>Inscri&ccedil;&otilde;es</h1>
+<h3>Selecione a escola</h3>
+<table border="0">
+	<tr>
+		<td>Escola:<br />
+		<select name="cboEscola" id="cboEscola"></select></td>
+		<td><input style="border: none; height: 30px;" type="button" name="btn_filtrar" id="btn_filtrar" value="" onclick="mostraInscricao()" tabindex="5" class="Pesquisar" /></td>
+	</tr>
+</table>
+<br />
+<label id="lblEscolaInscricao" style="display: none;"></label>
+</form>
+</div>
+</div></div></div></div></div>
+</body>
+</html>

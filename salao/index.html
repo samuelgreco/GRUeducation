@@ -1,0 +1,140 @@
+<html>
+    <style type="text/css">
+        <!--
+        .style4 {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 10px;
+        }
+        -->
+    </style>
+    <head>
+        <title>Salão do Livro</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style type="text/css">
+            <!--
+            body {
+                background: #FFFFFF;
+                text-align:center;
+                margin: 0px;
+                padding: 0px;
+
+            }
+
+            #caixa_senha  {
+                position: relative; 
+                width:650px;
+                margin:0 auto;
+                height:auto;
+                margin-top:150px;
+                margin-bottom:0px;
+
+            }
+
+            #caixa_topo {
+                background:url(../lib/images/fundo_topo.png) no-repeat;
+                width:650px;
+                height:26px;
+                display:block;			
+                margin: 0 auto;
+
+            }
+
+            #caixa_meio {
+                background: url(../lib/images/fundo_meio.png) repeat-y;
+                width:650px;
+                height: auto;
+                display:block;
+                margin: 0 auto;
+                padding:0px;
+                margin-top:0px;
+            }
+
+            #caixa_baixo{
+
+                background: url(../lib/images/fundo_baixo.png) no-repeat;
+                width:650px;
+                height:23px;
+                margin: 0 auto;
+                font-size: 10px;
+                text-align: left;
+                padding-left: 15px;
+            }
+
+            #caixa {
+                width:630px;
+                height:auto;
+                padding:10px;
+                text-align:left;
+            }		  
+
+            -->
+
+        </style>
+        <link href="../lib/css/estilo.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            <!--
+            .style3 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; margin-left:50px; }
+            -->
+        </style>
+        <script type="text/javascript" src="../lib/js/ajax.js"></script>
+        <script type="text/javascript" src="../lib/js/select.js"></script>
+        <script type="text/javascript" src="../lib/js/objeto.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="Iniciar()">
+        <div id="caixa_senha">
+            <div id="caixa_topo"></div>
+            <div id="caixa_meio">
+                <div id="caixa">
+                    <table width="630">
+                        <tr>
+                            <td width="295"><center><img src="imagens/logo.png"><br />
+                            <!-- <label style="text-align:center;font-size:12px;color:#2980b9;">4° SALÃO DO LIVRO</label></center></td> -->
+                            <td>
+                                <table width="355" border="0">
+                                    <tr>
+                                        <td width="335"><form name="form1" method="post" action="">
+
+                                                <span class="style3">Login</span><br>
+                                                <input class="style3" type="text" name="txt_nome" id="txt_nome">
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><form name="form2" method="post" action="">
+                                                <span class="style3">Senha</span><br>
+                                                <input class="style3" type="password" name="txt_senha" id="txt_senha" onkeypress="return Enter(event)">
+                                                <script language=JavaScript>
+                                                    function Enter(event) {
+                                                        if (event.keyCode == 13)
+                                                        {
+                                                            testar();
+                                                            return false;
+                                                        }
+                                                    }
+                                                </script> 
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="335" border="0">
+                                    <tr>
+                                        <td width="335">
+                                            <input type="button" style="margin-left:50px;" class="Login" name="btn_ok" id="btn_ok" value="Entrar" onClick="testar()">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            </tr>
+                    </table>
+                </div>
+                <div  style="text-align: right;margin-right: 15px;"><img src="../lib/images/logo_gru.png" width="125"/></div>
+            </div>
+
+            <div id="caixa_baixo">
+                v.1.7
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sistema DPIE</title>
+
+
+<link href="../../lib/css/jquery-ui-1.8.11.custom.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/css/jquery.click-calendario-1.0.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/css/demo_table_jui.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/css/estilo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="../../lib/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="../../lib/js/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="../../lib/js/jquery.validate.js"></script>
+<script type="text/javascript" src="../../lib/js/ajax.js"></script>
+<script type="text/javascript" src="../../lib/js/objeto.js"></script>
+<script type="text/javascript" src="../../lib/js/funcoes.js"></script>
+<script type="text/javascript" src="../../lib/js/select.js"></script>
+<script type="text/javascript" src="../../lib/js/jquery.click-calendario-1.0.js"></script>
+<script type="text/javascript" src="../js/validacao.js"></script>
+<script type="text/javascript" src="../js/escola.js"></script>
+
+<script type="text/javascript">
+    	              
+    $(document).ready(function(){    	              
+        $('#data').focus(function(){
+        	$(this).calendario({
+        		target:'#data'
+        	});
+        });                       
+    });                     
+            
+</script> 
+</head>
+
+<body onload="Iniciar()">
+<div id="tela">
+<div id="tela_centro">
+<h1>Escola</h1>
+</div>
+<div id="tela_centro">
+<form id="frmCadEscola" name="frmCadEscola">
+<table>
+	<tr>
+		<td>
+			Tipo de escola: *<br />
+			<select style="width: 150px;" id="cboTipo" name="cboTipo" onchange="escondeOnibus(this.value);">
+				<option value=""></option>
+				<option value="1">Municipal</option>
+				<option value="2">Estadual / Particular</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Escola: *<br />
+			<input type="text" name="txtEscola" id="txtEscola" size="50" />
+			<input name="txtID" id="txtID" type="hidden" />
+		</td>
+	</tr>
+</table>
+<div id="lblIdentifica">
+<table>
+	<tr>
+		<td colspan=2>
+			Responsável pela escola:<br />
+			<input type="text" name="txtResponsavel" id="txtResponsavel" size="50" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Telefone:<br />
+			<input type="text" name="txtTelefone" id="txtTelefone" />
+		</td>
+		<td>
+			E-mail:<br />
+			<input type="text" name="txtEmail" id="txtEmail" />
+		</td>
+	</tr>
+</table>
+</div>
+<div id="lblOnibus">
+<table>
+	<tr>
+		<td>
+			Ônibus Dia:<br />
+			<input name="txtOnibusDia" id="txtOnibusDia" type="text" onchange="verificaOnibus(this.value,1);" onkeydown='return EntradaNumerico(event)'/>
+		</td>
+		<td>
+			Ônibus EJA / MOVA:<br />
+			<input name="txtOnibusEJA" id="txtOnibusEJA" type="text" onchange="verificaOnibus(this.value,2);" onkeydown='return EntradaNumerico(event)'/>
+		</td>
+	</tr>
+</table>
+</div>
+<table>
+	<tr>
+		<td>
+			Login: *<br />
+			<input name="txtLogin" id="txtLogin" type="text" />
+		</td>
+		<td>
+			Senha: *<br />
+			<input name="txtSenha" id="txtSenha" type="password" />
+		</td>
+	</tr>
+</table>
+<br />
+<table width="156" border="0">
+  <tr>
+    <td width="150"><input type="button" name="cmdSalvarEscola" id="cmdSalvarEscola" value="Salvar"  class="Salvar"/></td>
+  </tr>
+</table>
+
+</form>
+
+</div>
+</div>
+</body>
+</html>

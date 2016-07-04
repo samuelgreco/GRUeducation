@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sistema DPIE</title>
+
+
+<link href="../../lib/css/jquery-ui-1.8.11.custom.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/css/jquery.click-calendario-1.0.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/css/demo_table_jui.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/css/estilo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="../../lib/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="../../lib/js/jquery.validate.js"></script>
+<script type="text/javascript" language="javascript" src="../../lib/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../../lib/js/jquery.click-calendario-1.0.js"></script>
+<script type="text/javascript" src="../js/horario.js"></script>
+<script type="text/javascript" src="../../lib/js/ajax.js"></script>
+<script type="text/javascript" src="../../lib/js/funcoes.js"></script>
+<script type="text/javascript" src="../../lib/js/objeto.js"></script>
+<script type="text/javascript" src="../../lib/js/select.js"></script>
+<script type="text/javascript" src="../js/validacao.js"></script>
+
+<script type="text/javascript">
+    	              
+    $(document).ready(function(){    	              
+        $('#txtData').focus(function(){
+        	$(this).calendario({
+        		target:'#txtData'
+        	});
+        });                       
+    });                     
+            
+</script> 
+
+
+</head>
+
+<body onload="Iniciar()">
+<div id="tela">
+<div id="tela_centro">
+<h1>Hor&aacute;rios</h1>
+</div>
+<div id="tela_centro">
+<form id="frmCadHorario" name="frmCadHorario">
+<table width="600">
+	<tr>
+		<td>
+			Tipo de Vaga: *<br />
+			<!-- <input name="txtNome" id="txtNome" type="text" size="60"/> -->
+			<input name="txtID" id="txtID" type="hidden" />
+			<select style="width: 150px;" id="cboTipo" name="cboTipo" onchange="descreveVaga(this.value);">
+				<option value=""></option>
+				<option value="1">Municipal</option>
+				<option value="2">Estadual / Particular</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Quantidade<label id="lblVagas"></label>: *<br />
+			<input name="txtVagas" id="txtVagas" type="text" size="22" onkeydown='return EntradaNumerico(event)'/>
+		</td>
+	</tr>
+</table>
+
+<table width="600" border="0">
+  <tr>
+  <td>Data: * <br />
+  <input type="text" name="txtData" class="data" id="txtData" size="22" maxlength="10" readonly="readonly"/></td>
+      </tr>
+</table>
+<table width="300">
+  <tr>
+    <td>Hora Início: *<br />
+      <select name="cboHoraInicio" id="cboHoraInicio">
+	      <option value=""></option>
+	      <option value="08:00">08:00</option>
+	      <option value="08:30">08:30</option>
+	      <option value="09:00">09:00</option>
+	      <option value="09:30">09:30</option>
+	      <option value="10:00">10:00</option>
+	      <option value="10:30">10:30</option>
+	      <option value="11:00">11:00</option>
+	      <option value="11:30">11:30</option>
+	      <option value="12:00">12:00</option>
+	      <option value="12:30">12:30</option>
+	      <option value="13:00">13:00</option>
+	      <option value="13:30">13:30</option>
+	      <option value="14:00">14:00</option>
+	      <option value="14:30">14:30</option>
+	      <option value="15:00">15:00</option>
+	      <option value="15:30">15:30</option>
+	      <option value="16:00">16:00</option>
+	      <option value="16:30">16:30</option>
+	      <option value="17:00">17:00</option>
+	      <option value="17:30">17:30</option>
+	      <option value="18:00">18:00</option>
+	      <option value="18:30">18:30</option>
+	      <option value="19:00">19:00</option>
+	      <option value="19:30">19:30</option>
+	      <option value="20:00">20:00</option>
+	      <option value="20:30">20:30</option>
+	      <option value="21:00">21:00</option>
+	      <option value="21:30">21:30</option>
+	      <option value="22:00">22:00</option>
+      </select></td>
+    <td>Hora Fim: *<br />
+      <select name="cboHoraFim" id="cboHoraFim">
+      	  <option value=""></option>
+	      <option value="08:30">08:30</option>
+	      <option value="09:00">09:00</option>
+	      <option value="09:30">09:30</option>
+	      <option value="10:00">10:00</option>
+		  <option value="10:30">10:30</option>
+	      <option value="11:00">11:00</option>
+		  <option value="11:30">11:30</option>
+	      <option value="12:00">12:00</option>
+	      <option value="12:30">12:30</option>
+	      <option value="13:00">13:00</option>
+	      <option value="13:30">13:30</option>
+	      <option value="14:00">14:00</option>
+	      <option value="14:30">14:30</option>
+	      <option value="15:00">15:00</option>
+	      <option value="15:30">15:30</option>
+	      <option value="16:00">16:00</option>
+	      <option value="16:30">16:30</option>
+	      <option value="17:00">17:00</option>
+	      <option value="17:30">17:30</option>
+	      <option value="18:00">18:00</option>
+	      <option value="18:30">18:30</option>
+	      <option value="19:00">19:00</option>
+	      <option value="19:30">19:30</option>
+	      <option value="20:00">20:00</option>
+	      <option value="20:30">20:30</option>
+	      <option value="21:00">21:00</option>
+	      <option value="21:30">21:30</option>
+	      <option value="22:00">22:00</option>
+	      <option value="22:30">22:30</option>
+      </select></td>
+  </tr>
+</table>
+<br />
+<table width="156" border="0">
+  <tr>
+    <td width="150"><input type="button" name="cmdSalvarHorario" id="cmdSalvarHorario" value="Salvar"  class="Salvar"/></td>
+  </tr>
+</table>
+</form>
+</div>
+</div>
+</body>
+</html>

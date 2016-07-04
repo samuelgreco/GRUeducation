@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Salão do Livro</title>
+        
+		<link href="../../lib/css/estilo.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../../lib/js/jquery.js"></script>
+		<script type="text/javascript" src="../../lib/js/ajax.js"></script>
+		<script type="text/javascript" src="../../lib/js/select.js"></script>
+		<script type="text/javascript" src="../../lib/js/objeto.js"></script>
+<!-- 		<script type="text/javascript" src="js/jquery.js"></script> -->
+		<script type="text/javascript" src="../../lib/js/jquery.validate.js"></script>
+		<script type="text/javascript" src="../js/validacao.js"></script>
+		<script type="text/javascript" src="../js/alterar_senha.js"></script>
+    </head>
+
+	<body onload="iniciar()">
+        	<div id="conteudo">
+            	<div id="formulario">
+                	<h1>Salão do Livro 2014</h1>
+                	<h2 style="padding: 0px;">Atualização de dados</h2>
+                	<i>Para acessar o sistema, é necessário que atualize os seguintes campos:</i>
+                	<br />
+                	<br />
+                	<div id="content">
+                       <form id="frmSenha" name="frmSenha" action="#" method="post">
+                     		   <p>
+                                   <label for="atual">Usuário:</label><br/>
+                                   <label style="font-weight: bold;" id="lblUsuario"></label>
+                                   <input id="txtID" name="txtID" type="hidden" />
+                                   <input name="txtTipo" id="txtTipo" type="hidden" />
+                               </p>
+                               <p>
+                                   <label for="atual">Senha atual: *</label><br/>
+                                   <input id="txtSenhaAtual" name="txtSenhaAtual" type="password" maxlength="45"/>
+                               </p>
+                               <p>
+                                   <label for="nova">Nova senha: *</label><br/>
+                                   <input id="txtNovaSenha" name="txtNovaSenha" type="password" maxlength="45"/>
+                               </p>
+                               <p>
+                                   <label for="repete">Repetir nova senha: *</label><br/>
+                                   <input id="txtRepeteSenha" name="txtRepeteSenha" type="password" maxlength="45"/>
+                               </p>
+                               <div id="divParticular" style="visibility: hidden;display: none;">
+                               <br />
+                               	   <table>
+                               	      <tr>
+                               	         <td colspan="2">
+			                                   <label for="atual">Responsável pela escola: *</label><br/>
+			                                   <input id="txtResponsavel" name="txtResponsavel" type="text" maxlength="45" size="50"/>
+                               	         </td>
+                               	      </tr>
+                               	      <tr>
+                               	         <td>
+			                                   <label for="nova">Telefone: *</label><br/>
+			                                   <input id="txtTelefone" name="txtTelefone" type="text" maxlength="45"/>
+                               	         </td>
+                               	         <td>
+			                                   <label for="repete">Email: *</label><br/>
+			                                   <input id="txtEmail" name="txtEmail" type="text" maxlength="45"/>
+                               	         </td>
+                               	      </tr>
+                               	   </table>
+                               </div>
+                               <br />
+                               <p class="submit2">
+                                   <button id="cmdSalvarSenha" type="button" class="Login">Entrar</button>
+                                   <input type="button" value="Logout" class="Logout" onclick="window.location.href='../index.html'" />
+                                   <div  style="text-align: right;margin-right: 15px;width: 600px;"><img src="../../Template/images/logo_gru.png" width="125"/></div>
+                               </p>
+                       </form>
+               		</div>
+            </div>
+          </div>
+     </body>
+</html>

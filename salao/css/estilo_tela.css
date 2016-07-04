@@ -1,0 +1,147 @@
+a.link{text-decoration: none;}
+a.link:link {color: #000000;}
+a.link:visited {color: #000000;}
+a.link:hover {color: #FF0000;}
+a img{border:none;}
+
+div#banner h1{
+	line-height: 1.0em;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+	color: #ecf0f1;
+	font-size: 29px;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+.tabela {
+	margin:0px;padding:0px;
+	width:70%;
+	border:1px solid #ffffff;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.tabela table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.tabela tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.tabela table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.tabela table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.tabela tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.tabela tr:hover td{
+	
+}
+.tabela tr:nth-child(odd){ background-color:#ecf0f1; }
+.tabela tr:nth-child(even)    { background-color:#ffffff; }.tabela td{
+	border:1px solid #ffffff;
+	border-width:0px 1px 1px 0px;
+	text-align:center;
+	padding:7px;
+	font-size:12px;
+	font-family:Verdana;
+	font-weight:normal;
+	color:#000000;
+}.tabela tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.tabela tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.tabela tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.tabela tr:first-child td{
+		background:-o-linear-gradient(bottom, #34495e 5%, #34495e 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #34495e), color-stop(1, #34495e) );
+	background:-moz-linear-gradient( center top, #34495e 5%, #34495e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#34495e", endColorstr="#34495e");	background: -o-linear-gradient(top,#34495e,34495e);
+
+	background-color:#34495e;
+	border:0px solid #ffffff;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Verdana;
+	font-weight:bold;
+	color:#ffffff;
+}
+.tabela tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #34495e 5%, #34495e 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #34495e), color-stop(1, #34495e) );
+	background:-moz-linear-gradient( center top, #34495e 5%, #34495e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#34495e", endColorstr="#34495e");	background: -o-linear-gradient(top,#34495e,34495e);
+
+	background-color:#34495e;
+}
+.tabela tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.tabela tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+.tabela2{
+	margin:0px;padding:0px;
+	background-color:transparent;
+}
+.Cancelar{
+    height:40px;
+    width: 130px;
+    background: #E74C3C url(../imagens/cancelar.png) no-repeat 5px;
+    border:#E74C3C 1px solid;
+    color: #FFFFFF;
+    font: 14px verdana, arial, helvetica, sans-serif;
+    margin-right: 15px;
+    padding-bottom:2px;
+    cursor: pointer;
+}
+
+.Cancelar:active{ 
+    background: #E74C3C url(../imagens/cancelar.png) no-repeat 6px; 
+    color: #DDDDDD;
+    font-weight:bold;
+}
+
+.Tutorial{
+	background: #fff url(../imagens/info.png) no-repeat 5px;
+	border: #000 1px solid;
+	color: #f00;
+	font: 14px verdana, arial, helvetica, sans-serif;
+	font-weight: bold;
+	margin: 5px;
+	padding: 10px;
+	padding-left: 40px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.Tutorial:active{
+	background: #fff url(../imagens/info.png) no-repeat 6px; 
+	color: #f00;
+	font-weight:bolder;
+}
